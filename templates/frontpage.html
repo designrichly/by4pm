@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>A most wonderful blog</title>
+  </head>
+  
+  <body>
+    <h1>Da Blog</h1>
+
+    {% for blog_entry in posts %}
+    <!-- This enables us to put a Python loop in the html, using jinja -->
+      <div class="blog_entry"><!-- This is different to blog_entry above, it's creating a class to enable us to style it with CSS -->
+        <div class="blog_title">{{blog_entry.blog_title}}</div><!-- This is a class, again for styling, which will be used for the blog entry title. Pulls from db post, instance blog_entry -->
+        <pre class="blog-body">{{blog_entry.blog_entry}}</pre><!-- Pre enables you to preserve white space. This is this particular instance, blog_entry, from the db type blog_entry -->
+    </div>
+    {% endfor %}<!-- ending the Python loop-->
+    <hr>
+     <a href="/newpost">Add a new post</a>
+ 
+  </body>
+</html>

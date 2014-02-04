@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Add a new post</title>
+  </head>
+  <body>
+     <form method="post">
+      <label>
+        <div>Blog Title</div>
+        <input type="text" name="subject" value="{{blog_title}}">
+      </label>
+      
+      <label>
+        <div>Blog Entry</div>
+        <textarea name="content">{{blog_entry}}</textarea>
+      </label>
+      <div class="error">{{error}}</div>
+      <!-- The curly brackets render our error message, defined in the MainPage else) -->
+      <input type="submit">
+    </form>
+    <hr>
+        <a href="/">Return to blog home</a>
+
+  </body>
+  
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>A most wonderful blog</title>
+  </head>
+  
+  <body>
+    <h1>Da Blog</h1>
+
+      <div class="blog_entry">
+        <div class="blog_title">{{p.blog_title}}</div><!-- This is a class, again for styling, which will be used for the blog entry title. Pulls from db post, instance blog_entry -->
+        <pre class="blog-body">{{p.blog_entry}}</pre><!-- Pre enables you to preserve white space. This is this particular instance, blog_entry, from the db type blog_entry -->
+    </div>
+
+    
+    <!-- Here, above our form, we're putting the posts currently in the database -->    
+      <hr>
+        <a href="/newpost">Add new post</a>
+    <br>
+        <a href="/">Home page</a>
+ 
+  </body>
+</html>
